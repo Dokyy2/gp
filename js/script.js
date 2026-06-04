@@ -1,76 +1,142 @@
-const galleryImages = [
-  { src: "assets/images/coffins/coffin2.png", title: "تابوت أبيض فاخر بتفاصيل ذهبية", size: 560, poster: true },
-  { src: "assets/images/coffins/coffin1.png", title: "تابوت أبيض فاخر", size: 620, poster: true },
-  { src: "assets/images/coffins/coffin3.png", title: "تابوت مودرن", size: 500, poster: true },
-  { src: "assets/images/coffins/coffin2.png", title: "تفاصيل تشطيب حقيقية", size: 430, poster: true },
-  { src: "assets/images/coffins/coffin1.png", title: "جودة الخامات والتقفيل", size: 540, poster: true },
-  { src: "assets/images/coffins/coffin2.png", title: "نماذج متوفرة من منتجاتنا", size: 610, poster: true },
-  { src: "assets/images/coffins/coffin1.png", title: "تابوت بتصميم كلاسيكي", size: 450, poster: true },
-  { src: "assets/images/coffins/coffin3.png", title: "تصميم عملي ومحترم", size: 520, poster: true },
-  { src: "assets/images/coffins/coffin2.png", title: "منتجات مصورة من الواقع", size: 580, poster: true },
-  { src: "assets/images/coffins/coffin1.png", title: "تشطيب أبيض فاخر", size: 470, poster: true },
-  { src: "assets/images/coffins/coffin2.png", title: "مقاسات متعددة حسب الاحتياج", size: 640, poster: true },
-  { src: "assets/images/coffins/coffin3.png", title: "معرض منتجات G.P", size: 420, poster: true },
-  { src: "assets/images/coffins/coffin1.png", title: "تفاصيل ذهبية واضحة", size: 530, poster: true },
-  { src: "assets/images/coffins/coffin2.png", title: "تابوت أبيض بتجهيز فاخر", size: 490, poster: true },
-  { src: "assets/images/coffins/coffin3.png", title: "اختيارات متعددة للتوابيت", size: 570, poster: true },
-  { src: "assets/images/vehicles/car1.png", title: "سيارة نقل مجهزة", size: 320 },
-  { src: "assets/images/vehicles/car2.png", title: "خدمة نقل المتوفين", size: 300 },
-  { src: "assets/images/vehicles/car3.png", title: "سيارة خدمة ثانوية", size: 340 },
-  { src: "assets/images/coffins/coffin1.png", title: "صورة منتج حقيقية", size: 600, poster: true },
-  { src: "assets/images/coffins/coffin2.png", title: "تفاصيل المنتج", size: 440, poster: true },
-  { src: "assets/images/coffins/coffin3.png", title: "تابوت متوفر", size: 510, poster: true },
-  { src: "assets/images/coffins/coffin1.png", title: "منتج جاهز للعرض", size: 460, poster: true },
-  { src: "assets/images/coffins/coffin2.png", title: "تشطيب نظيف ومحترم", size: 550, poster: true },
-  { src: "assets/images/coffins/coffin3.png", title: "كتالوج التوابيت", size: 410, poster: true }
+const phoneNumber = "201098061106";
+
+// أضف صور التوابيت الإسلامية هنا.
+// حط الصورة داخل: assets/images/coffins
+// ثم انسخ آخر سطر من القائمة وغير اسم الملف والعنوان.
+const islamicCoffinImages = [
+  { src: "assets/images/coffins/islamic-1.png", title: "تابوت إسلامي موديل 1" },
+  { src: "assets/images/coffins/islamic-2.png", title: "تابوت إسلامي موديل 2" },
+  { src: "assets/images/coffins/islamic-3.png", title: "تابوت إسلامي موديل 3" },
+  { src: "assets/images/coffins/islamic-4.png", title: "تابوت إسلامي موديل 4" },
+  { src: "assets/images/coffins/islamic-5.png", title: "تابوت إسلامي موديل 5" }
+];
+
+// أضف صور التوابيت المسيحية هنا.
+// حط الصورة داخل: assets/images/coffins
+// ثم انسخ آخر سطر من القائمة وغير اسم الملف والعنوان.
+const christianCoffinImages = [
+  { src: "assets/images/coffins/christian-1.png", title: "تابوت مسيحي موديل 1" },
+  { src: "assets/images/coffins/christian-2.png", title: "تابوت مسيحي موديل 2" },
+  { src: "assets/images/coffins/christian-3.png", title: "تابوت مسيحي موديل 3" },
+  { src: "assets/images/coffins/christian-4.png", title: "تابوت مسيحي موديل 4" },
+  { src: "assets/images/coffins/christian-5.png", title: "تابوت مسيحي موديل 5" }
+];
+
+const coffinGalleries = {
+  islamic: {
+    title: "معرض التوابيت الإسلامية",
+    images: islamicCoffinImages
+  },
+  christian: {
+    title: "معرض التوابيت المسيحية",
+    images: christianCoffinImages
+  }
+};
+
+const vehicleImages = [
+  { src: "assets/images/vehicles/car1.png", title: "سيارة نقل متوفين مجهزة" },
+  { src: "assets/images/vehicles/car2.png", title: "سيارة نقل متوفين" },
+  { src: "assets/images/vehicles/car3.png", title: "سيارة خدمة النقل والدعم" }
 ];
 
 const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
-const gallery = document.querySelector("[data-gallery]");
+const coffinModal = document.querySelector("[data-coffin-modal]");
+const modalTitle = document.querySelector("[data-coffin-modal-title]");
+const modalGrid = document.querySelector("[data-coffin-modal-grid]");
+const closeModalBtn = document.querySelector("[data-close-coffin-modal]");
 const lightbox = document.querySelector("[data-lightbox]");
 const lightboxImg = document.querySelector("[data-lightbox-img]");
 const lightboxCaption = document.querySelector("[data-lightbox-caption]");
 const closeBtn = document.querySelector("[data-lightbox-close]");
 const prevBtn = document.querySelector("[data-lightbox-prev]");
 const nextBtn = document.querySelector("[data-lightbox-next]");
+const zoomInBtn = document.querySelector("[data-zoom-in]");
+const zoomOutBtn = document.querySelector("[data-zoom-out]");
+const zoomResetBtn = document.querySelector("[data-zoom-reset]");
 
+let activeImages = [];
 let activeImageIndex = 0;
+let zoomLevel = 1;
 
 function setHeaderState() {
+  if (!header) return;
   header.classList.toggle("scrolled", window.scrollY > 18);
 }
 
-function renderGallery() {
-  const fragment = document.createDocumentFragment();
-
-  galleryImages.forEach((image, index) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = `gallery-item reveal${image.poster ? " poster" : ""}`;
-    button.style.setProperty("--gallery-height", `${image.size}px`);
-    button.setAttribute("aria-label", `فتح الصورة: ${image.title}`);
-
-    const img = document.createElement("img");
-    img.src = image.src;
-    img.alt = image.title;
-    img.loading = index < 6 ? "eager" : "lazy";
-
-    const caption = document.createElement("span");
-    caption.className = "gallery-caption";
-    caption.textContent = image.title;
-
-    button.append(img, caption);
-    button.addEventListener("click", () => openLightbox(index));
-    fragment.append(button);
-  });
-
-  gallery.append(fragment);
+function requestUrl(item) {
+  const message = `اريد تفاصيل عن هذا المنتج: ${item.title}`;
+  return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 }
 
-function openLightbox(index) {
+function openCoffinModal(type) {
+  const selectedGallery = coffinGalleries[type];
+  if (!selectedGallery || !coffinModal || !modalGrid || !modalTitle) return;
+
+  activeImages = selectedGallery.images;
+  modalTitle.textContent = selectedGallery.title;
+  modalGrid.innerHTML = "";
+
+  const fragment = document.createDocumentFragment();
+
+  selectedGallery.images.forEach((item, index) => {
+    const card = document.createElement("article");
+    card.className = "modal-product-card";
+
+    const imageButton = document.createElement("button");
+    imageButton.className = "modal-image-button";
+    imageButton.type = "button";
+    imageButton.setAttribute("aria-label", `فتح صورة ${item.title}`);
+    imageButton.addEventListener("click", () => openLightbox(index, selectedGallery.images));
+
+    const img = document.createElement("img");
+    img.src = item.src;
+    img.alt = item.title;
+    img.loading = "lazy";
+
+    const hint = document.createElement("span");
+    hint.className = "image-click-hint";
+    hint.textContent = "اضغط للتكبير";
+
+    imageButton.append(img, hint);
+
+    const copy = document.createElement("div");
+    copy.className = "modal-product-copy";
+
+    const title = document.createElement("h3");
+    title.textContent = item.title;
+
+    const order = document.createElement("a");
+    order.className = "order-now-button";
+    order.href = requestUrl(item);
+    order.target = "_blank";
+    order.rel = "noopener";
+    order.textContent = "اطلبه الآن";
+
+    copy.append(title, order);
+    card.append(imageButton, copy);
+    fragment.append(card);
+  });
+
+  modalGrid.append(fragment);
+  coffinModal.classList.add("open");
+  coffinModal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeCoffinModal() {
+  if (!coffinModal) return;
+  coffinModal.classList.remove("open");
+  coffinModal.setAttribute("aria-hidden", "true");
+  if (!lightbox?.classList.contains("open")) document.body.style.overflow = "";
+}
+
+function openLightbox(index, images) {
+  if (!lightbox || !images?.length) return;
+  activeImages = images;
   activeImageIndex = index;
+  zoomLevel = 1;
   updateLightbox();
   lightbox.classList.add("open");
   lightbox.setAttribute("aria-hidden", "false");
@@ -78,29 +144,48 @@ function openLightbox(index) {
 }
 
 function closeLightbox() {
+  if (!lightbox) return;
   lightbox.classList.remove("open");
   lightbox.setAttribute("aria-hidden", "true");
-  document.body.style.overflow = "";
+  zoomLevel = 1;
+  if (lightboxImg) lightboxImg.style.transform = "";
+  if (!coffinModal?.classList.contains("open")) document.body.style.overflow = "";
 }
 
 function updateLightbox() {
-  const image = galleryImages[activeImageIndex];
+  const image = activeImages[activeImageIndex];
+  if (!image || !lightboxImg || !lightboxCaption) return;
   lightboxImg.src = image.src;
   lightboxImg.alt = image.title;
   lightboxCaption.textContent = image.title;
+  lightboxImg.style.transform = `scale(${zoomLevel})`;
 }
 
 function moveLightbox(direction) {
-  activeImageIndex = (activeImageIndex + direction + galleryImages.length) % galleryImages.length;
+  if (!activeImages.length) return;
+  activeImageIndex = (activeImageIndex + direction + activeImages.length) % activeImages.length;
+  zoomLevel = 1;
   updateLightbox();
+}
+
+function changeZoom(amount) {
+  if (!lightboxImg) return;
+  zoomLevel = Math.min(2.4, Math.max(0.8, zoomLevel + amount));
+  lightboxImg.style.transform = `scale(${zoomLevel})`;
+}
+
+function setupCoffinButtons() {
+  document.querySelectorAll("[data-open-coffin-gallery]").forEach((button) => {
+    button.addEventListener("click", () => openCoffinModal(button.dataset.openCoffinGallery));
+  });
 }
 
 function setupVehiclePreview() {
   document.querySelectorAll("[data-vehicle-image]").forEach((button) => {
     button.addEventListener("click", () => {
       const src = button.getAttribute("data-vehicle-image");
-      const index = galleryImages.findIndex((image) => image.src === src);
-      if (index >= 0) openLightbox(index);
+      const index = vehicleImages.findIndex((image) => image.src === src);
+      if (index >= 0) openLightbox(index, vehicleImages);
     });
   });
 }
@@ -121,37 +206,59 @@ function setupRevealAnimation() {
   document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 }
 
-navToggle.addEventListener("click", () => {
+navToggle?.addEventListener("click", () => {
   const isOpen = nav.classList.toggle("open");
   navToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
-nav.addEventListener("click", (event) => {
+nav?.addEventListener("click", (event) => {
   if (event.target.matches("a")) {
     nav.classList.remove("open");
-    navToggle.setAttribute("aria-expanded", "false");
+    navToggle?.setAttribute("aria-expanded", "false");
   }
 });
 
-closeBtn.addEventListener("click", closeLightbox);
-prevBtn.addEventListener("click", () => moveLightbox(-1));
-nextBtn.addEventListener("click", () => moveLightbox(1));
+closeModalBtn?.addEventListener("click", closeCoffinModal);
+coffinModal?.addEventListener("click", (event) => {
+  if (event.target === coffinModal) closeCoffinModal();
+});
 
-lightbox.addEventListener("click", (event) => {
+closeBtn?.addEventListener("click", closeLightbox);
+prevBtn?.addEventListener("click", () => moveLightbox(-1));
+nextBtn?.addEventListener("click", () => moveLightbox(1));
+zoomInBtn?.addEventListener("click", () => changeZoom(0.2));
+zoomOutBtn?.addEventListener("click", () => changeZoom(-0.2));
+zoomResetBtn?.addEventListener("click", () => {
+  zoomLevel = 1;
+  if (lightboxImg) lightboxImg.style.transform = "scale(1)";
+});
+
+lightbox?.addEventListener("click", (event) => {
   if (event.target === lightbox) closeLightbox();
 });
 
 document.addEventListener("keydown", (event) => {
-  if (!lightbox.classList.contains("open")) return;
+  if (event.key === "Escape" && lightbox?.classList.contains("open")) {
+    closeLightbox();
+    return;
+  }
 
-  if (event.key === "Escape") closeLightbox();
+  if (event.key === "Escape" && coffinModal?.classList.contains("open")) {
+    closeCoffinModal();
+    return;
+  }
+
+  if (!lightbox?.classList.contains("open")) return;
+
   if (event.key === "ArrowLeft") moveLightbox(1);
   if (event.key === "ArrowRight") moveLightbox(-1);
+  if (event.key === "+") changeZoom(0.2);
+  if (event.key === "-") changeZoom(-0.2);
 });
 
 window.addEventListener("scroll", setHeaderState, { passive: true });
 
-renderGallery();
+setupCoffinButtons();
 setupVehiclePreview();
 setupRevealAnimation();
 setHeaderState();

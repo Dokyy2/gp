@@ -31,10 +31,11 @@
 
       <nav class="main-nav" data-nav aria-label="القائمة الرئيسية">
         <a href="#home">الرئيسية</a>
-        <a href="#coffins">التوابيت</a>
-        <a href="#gallery">معرض الصور</a>
+        <a href="#permits">تصاريح الدفن</a>
+        <a href="#coffins">اختيار التوابيت</a>
+        <a href="#services">الخدمات</a>
         <a href="#vehicles">السيارات</a>
-        <a href="#documents">المستندات</a>
+        <a href="#smart-assistant">المساعد الذكى</a>
         <a href="#contact">تواصل</a>
       </nav>
     </header>
@@ -57,53 +58,53 @@
         <div class="scroll-cue"></div>
       </section>
 
-      <section class="section coffins-section" id="coffins">
-        <div class="section-head reveal">
-          <span class="eyebrow">Real Products</span>
-          <h2>أنواع التوابيت المتوفرة</h2>
-          <p>نماذج حقيقية من منتجاتنا بتفاصيل وتشطيبات واضحة.</p>
-        </div>
+      <section class="section permit-section" id="permits">
+        <div class="permit-glow-card reveal">
+          <div class="section-head permit-head">
+            <span class="eyebrow">Burial Permits</span>
+            <h2>المكتب على استعداد لاستخراج تصاريح الدفن</h2>
+          </div>
 
-        <div class="coffin-neon-grid">
-          <article class="coffin-neon-card reveal">
-            <div class="product-image">
-              <img src="assets/images/coffins/coffin1.png" alt="تابوت أبيض فاخر" loading="lazy" />
-            </div>
-            <div class="product-copy">
-              <span>موديل أبيض</span>
-              <h3>تابوت أبيض فاخر</h3>
-            </div>
-          </article>
+          <div class="permit-items">
+            <article class="permit-item">
+              <span class="permit-check" aria-hidden="true">✓</span>
+              <h3>أصل إخطار الوفاة</h3>
+            </article>
+            <article class="permit-item">
+              <span class="permit-check" aria-hidden="true">✓</span>
+              <h3>أصل بطاقة المتوفى السارية<br />أو شهادة ميلاد مميكنة حديثة</h3>
+            </article>
+            <article class="permit-item">
+              <span class="permit-check" aria-hidden="true">✓</span>
+              <h3>حضور أحد أقارب الدرجة الأولى</h3>
+            </article>
+          </div>
 
-          <article class="coffin-neon-card featured reveal">
-            <div class="product-image">
-              <img src="assets/images/coffins/coffin2.png" alt="تابوت فاخر بتشطيب أبيض وذهبي" loading="lazy" />
-            </div>
-            <div class="product-copy">
-              <span>تشطيب فاخر</span>
-              <h3>تابوت بتفاصيل ذهبية</h3>
-            </div>
-          </article>
-
-          <article class="coffin-neon-card reveal">
-            <div class="product-image">
-              <img src="assets/images/coffins/coffin3.png" alt="تابوت مودرن" loading="lazy" />
-            </div>
-            <div class="product-copy">
-              <span>تصميم مودرن</span>
-              <h3>تابوت مودرن</h3>
-            </div>
-          </article>
+          <p class="permit-message">
+            نساعد الأسرة فى إنهاء الإجراءات الأساسية بسرعة واحترام ووضوح، مع تقديم الإرشاد اللازم فى كل خطوة.
+          </p>
         </div>
       </section>
 
-      <section class="section gallery-section" id="gallery">
+      <section class="section coffins-section" id="coffins">
         <div class="section-head reveal">
-          <span class="eyebrow">Photo Gallery</span>
-          <h2>معرض الصور</h2>
-          <p>صور حقيقية للمنتجات والتفاصيل والخدمات.</p>
+          <span class="eyebrow">Coffin Catalog</span>
+          <h2>اختيار نوع التوابيت</h2>
+          <p>اضغط على النوع المطلوب لفتح معرض الصور الخاص به داخل نافذة مستقلة.</p>
         </div>
-        <div class="masonry-gallery" data-gallery aria-label="معرض صور المنتجات"></div>
+
+        <div class="coffin-type-actions">
+          <button class="coffin-type-button reveal" type="button" data-open-coffin-gallery="islamic">
+            <span class="type-icon" aria-hidden="true">🕌</span>
+            <strong>التوابيت الإسلامية</strong>
+            <small>اضغط لفتح المعرض</small>
+          </button>
+          <button class="coffin-type-button reveal" type="button" data-open-coffin-gallery="christian">
+            <span class="type-icon" aria-hidden="true">✝️</span>
+            <strong>التوابيت المسيحية</strong>
+            <small>اضغط لفتح المعرض</small>
+          </button>
+        </div>
       </section>
 
       <section class="section services-section" id="services">
@@ -154,50 +155,19 @@
         </div>
       </section>
 
-      <section class="section documents-section" id="documents">
-        <div class="royal-framed-container reveal">
-          <div class="framed-header">
-            <span class="eyebrow">Checklist & Info</span>
-            <h2>المستندات المطلوبة وإرشادات الأسرة</h2>
+      <section class="section smart-assistant-section" id="smart-assistant">
+        <div class="smart-assistant-card reveal">
+          <div class="assistant-copy">
+            <h2>مساعد إجراءات الوفاة</h2>
+            <p>
+              يساعدك فى معرفة إجراءات تسجيل الوفاة واستخراج التصاريح والمستندات المطلوبة وخطوات التعامل مع الجهات المختصة.
+            </p>
+            <a class="assistant-main-button" href="https://dokyy2.github.io/smart-assistant/" target="_blank" rel="noopener">
+              افتح المساعد الذكى
+            </a>
           </div>
-          
-          <div class="framed-content-split">
-            <div class="docs-side">
-              <div class="document-horizontal-grid">
-                <article class="document-inline-card">
-                  <span class="doc-icon" aria-hidden="true">📄</span>
-                  <div class="doc-info">
-                    <h3>شهادة الوفاة</h3>
-                  </div>
-                </article>
-                <article class="document-inline-card">
-                  <span class="doc-icon" aria-hidden="true">🪪</span>
-                  <div class="doc-info">
-                    <h3>بطاقة الرقم القومي</h3>
-                  </div>
-                </article>
-                <article class="document-inline-card">
-                  <span class="doc-icon" aria-hidden="true">📋</span>
-                  <div class="doc-info">
-                    <h3>تصريح الدفن</h3>
-                  </div>
-                </article>
-                <article class="document-inline-card">
-                  <span class="doc-icon" aria-hidden="true">📍</span>
-                  <div class="doc-info">
-                    <h3>بيانات مكان الدفن</h3>
-                  </div>
-                </article>
-              </div>
-            </div>
-
-            <div class="advice-side">
-              <div class="royal-advice-box">
-                <span class="advice-tag">معلومة للأسرة</span>
-                <h3>معلومة مهمة للأسرة</h3>
-                <p>يفضل تجهيز الأوراق الأساسية والاحتفاظ بنسخة واضحة منها لتسهيل وسرعة إنهاء كافة الإجراءات الرسمية للدفن.</p>
-              </div>
-            </div>
+          <div class="assistant-logo-box" aria-hidden="true">
+            <span>AI</span>
           </div>
         </div>
       </section>
@@ -206,7 +176,7 @@
         <div class="contact-panel reveal">
           <div class="contact-copy">
             <span class="eyebrow">Contact Us</span>
-            <h2>تواصل معنا الفوري</h2>
+            <h2>Contact Us</h2>
             <p>متاحون للمساعدة والرد على استفسارات الأسرة على مدار الـ 24 ساعة بكل احترافية وهدوء.</p>
             
             <div class="contact-details-list">
@@ -223,6 +193,10 @@
                 تواصل عبر واتساب
               </a>
               <a class="btn btn-glass btn-large" href="tel:+201098061106">اتصال مباشر</a>
+            </div>
+            <div class="contact-socials" aria-label="روابط التواصل">
+              <a href="#" aria-label="Facebook">f</a>
+              <a href="https://wa.me/201098061106" target="_blank" rel="noopener" aria-label="WhatsApp">w</a>
             </div>
           </div>
           
@@ -247,31 +221,42 @@
       <svg viewBox="0 0 448 512" class="whatsapp-svg-icon" aria-hidden="true">
         <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
       </svg>
+</a>
+
+    <a class="floating-assistant-button" href="https://dokyy2.github.io/smart-assistant/" target="_blank" rel="noopener" aria-label="فتح مساعد إجراءات الوفاة">
+      <span class="floating-assistant-glow"></span>
+      <span class="floating-assistant-logo">AI</span>
     </a>
+
+    <div class="coffin-gallery-modal" data-coffin-modal aria-hidden="true">
+      <div class="coffin-gallery-panel" role="dialog" aria-modal="true" aria-labelledby="coffin-modal-title">
+        <button class="modal-close" type="button" data-close-coffin-modal aria-label="إغلاق المعرض">×</button>
+        <div class="modal-head">
+          <span class="eyebrow">Product Gallery</span>
+          <h2 id="coffin-modal-title" data-coffin-modal-title>معرض التوابيت</h2>
+          <p>اضغط على الصورة لفتحها بالحجم الكامل، أو اطلب تفاصيل المنتج مباشرة.</p>
+        </div>
+        <div class="coffin-modal-grid" data-coffin-modal-grid></div>
+      </div>
+    </div>
 
     <div class="lightbox" data-lightbox aria-hidden="true">
       <button class="lightbox-close" type="button" aria-label="إغلاق" data-lightbox-close>×</button>
       <button class="lightbox-nav prev" type="button" aria-label="الصورة السابقة" data-lightbox-prev>‹</button>
       <figure>
         <img src="" alt="" data-lightbox-img />
+        <div class="lightbox-tools" aria-label="أدوات تكبير الصورة">
+          <button type="button" data-zoom-out aria-label="تصغير">−</button>
+          <button type="button" data-zoom-reset aria-label="إعادة الحجم">100%</button>
+          <button type="button" data-zoom-in aria-label="تكبير">+</button>
+        </div>
         <figcaption data-lightbox-caption></figcaption>
       </figure>
       <button class="lightbox-nav next" type="button" aria-label="الصورة التالية" data-lightbox-next>›</button>
     </div>
 
-    <footer class="footer">
-      <div class="footer-brand">
-        <img src="assets/images/logo.png" alt="G.P Funeral Home Service logo" />
-        <div>
-          <h2>G.P Funeral Home Service</h2>
-          <p>خدمة نقل وتجهيز ودفن المتوفين</p>
-        </div>
-      </div>
-      <div class="socials" aria-label="روابط التواصل">
-        <a href="#" aria-label="Facebook">f</a>
-        <a href="#" aria-label="Instagram">◎</a>
-        <a href="https://wa.me/201098061106" target="_blank" rel="noopener" aria-label="WhatsApp">w</a>
-      </div>
+    <footer class="signature-footer">
+      <p>Future Reservation System © 2026 - G.P Funeral home servers</p>
     </footer>
 
     <script src="js/script.js"></script>
