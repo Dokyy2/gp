@@ -19,7 +19,24 @@ const christianCoffinImages = [
   { src: "assets/images/coffins/christian-2.png", title: "تابوت مسيحي موديل 2" },
   { src: "assets/images/coffins/christian-3.png", title: "تابوت مسيحي موديل 3" },
   { src: "assets/images/coffins/christian-4.png", title: "تابوت مسيحي موديل 4" },
-  { src: "assets/images/coffins/christian-5.png", title: "تابوت مسيحي موديل 5" }
+  { src: "assets/images/coffins/christian-5.png", title: "تابوت مسيحي موديل 5" },
+  { src: "assets/images/coffins/christian-6.png", title: "تابوت مسيحي موديل 6" },
+  { src: "assets/images/coffins/christian-7.png", title: "تابوت مسيحي موديل 7" },
+  { src: "assets/images/coffins/christian-8.png", title: "تابوت مسيحي موديل 8" },
+  { src: "assets/images/coffins/christian-9.png", title: "تابوت مسيحي موديل 9" },
+  { src: "assets/images/coffins/christian-10.png", title: "تابوت مسيحي موديل 10" },
+  { src: "assets/images/coffins/christian-11.png", title: "تابوت مسيحي موديل 11" },
+  { src: "assets/images/coffins/christian-12.png", title: "تابوت مسيحي موديل 12" },
+  { src: "assets/images/coffins/christian-13.png", title: "تابوت مسيحي موديل 13" },
+  { src: "assets/images/coffins/christian-14.png", title: "تابوت مسيحي موديل 14" },
+  { src: "assets/images/coffins/christian-15.png", title: "تابوت مسيحي موديل 15" },
+  { src: "assets/images/coffins/christian-16.png", title: "تابوت مسيحي موديل 16" },
+  { src: "assets/images/coffins/christian-17.png", title: "تابوت مسيحي موديل 17" },
+  { src: "assets/images/coffins/christian-18.png", title: "تابوت مسيحي موديل 18" },
+  { src: "assets/images/coffins/christian-19.png", title: "تابوت مسيحي موديل 19" },
+  { src: "assets/images/coffins/christian-20.png", title: "تابوت مسيحي موديل 20" },
+  { src: "assets/images/coffins/christian-21.png", title: "تابوت مسيحي موديل 21" },
+  { src: "assets/images/coffins/christian-22.png", title: "تابوت مسيحي موديل 22" }
 ];
 
 const coffinGalleries = {
