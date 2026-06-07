@@ -46,6 +46,9 @@ const coffinModal = document.querySelector("[data-coffin-modal]");
 const modalTitle = document.querySelector("[data-coffin-modal-title]");
 const modalGrid = document.querySelector("[data-coffin-modal-grid]");
 const closeModalBtn = document.querySelector("[data-close-coffin-modal]");
+const farashaModal = document.querySelector("[data-farasha-modal]");
+const openFarashaModalBtn = document.querySelector("[data-open-farasha-modal]");
+const closeFarashaModalBtn = document.querySelector("[data-close-farasha-modal]");
 const lightbox = document.querySelector("[data-lightbox]");
 const lightboxImg = document.querySelector("[data-lightbox-img]");
 const lightboxCaption = document.querySelector("[data-lightbox-caption]");
@@ -130,6 +133,20 @@ function closeCoffinModal() {
   coffinModal.classList.remove("open");
   coffinModal.setAttribute("aria-hidden", "true");
   if (!lightbox?.classList.contains("open")) document.body.style.overflow = "";
+}
+
+function openFarashaModal() {
+  if (!farashaModal) return;
+  farashaModal.classList.add("open");
+  farashaModal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeFarashaModal() {
+  if (!farashaModal) return;
+  farashaModal.classList.remove("open");
+  farashaModal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
 }
 
 function openLightbox(index, images) {
@@ -223,6 +240,12 @@ coffinModal?.addEventListener("click", (event) => {
   if (event.target === coffinModal) closeCoffinModal();
 });
 
+openFarashaModalBtn?.addEventListener("click", openFarashaModal);
+closeFarashaModalBtn?.addEventListener("click", closeFarashaModal);
+farashaModal?.addEventListener("click", (event) => {
+  if (event.target === farashaModal) closeFarashaModal();
+});
+
 closeBtn?.addEventListener("click", closeLightbox);
 prevBtn?.addEventListener("click", () => moveLightbox(-1));
 nextBtn?.addEventListener("click", () => moveLightbox(1));
@@ -245,6 +268,11 @@ document.addEventListener("keydown", (event) => {
 
   if (event.key === "Escape" && coffinModal?.classList.contains("open")) {
     closeCoffinModal();
+    return;
+  }
+
+  if (event.key === "Escape" && farashaModal?.classList.contains("open")) {
+    closeFarashaModal();
     return;
   }
 

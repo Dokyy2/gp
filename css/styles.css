@@ -988,6 +988,43 @@ h1.hero-title-glow {
   color: var(--muted);
 }
 
+.farasha-service-panel {
+  width: min(100%, 900px);
+}
+
+.farasha-service-details {
+  display: grid;
+  gap: 1rem;
+  margin: 1.6rem 0;
+}
+
+.farasha-service-item {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.2rem;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.farasha-service-item span {
+  color: var(--gold);
+  font-weight: 800;
+}
+
+.farasha-service-item strong {
+  font-size: 1.12rem;
+}
+
+.farasha-service-item p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.farasha-order-button {
+  width: fit-content;
+}
+
 .coffin-modal-grid {
   display: grid;
   gap: 1rem;
@@ -1239,29 +1276,36 @@ border: 1px solid rgba(212,175,55,.35);
 
 .signature-footer {
   position: relative;
-  overflow: hidden;
-  padding: 1.4rem 1rem 2rem;
+  padding: 2rem 1rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
   text-align: center;
   background: #090909;
 }
 
 .signature-footer p {
   margin: 0;
-  display: inline-block;
-  color: var(--gold-glow);
+  color: rgba(255, 255, 255, 0.72);
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(0.92rem, 2.5vw, 1.15rem);
   letter-spacing: 0.03em;
+}
+
+.signature-name {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: var(--gold-glow);
+  font-weight: 700;
   text-shadow: 0 0 16px rgba(212, 175, 55, 0.34);
 }
 
-.signature-footer::after {
+.signature-name::after {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 7rem;
-  background: linear-gradient(90deg, transparent, rgba(255, 223, 122, 0.42), transparent);
+  top: -20%;
+  bottom: -20%;
+  width: 2.8rem;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
   transform: skewX(-18deg);
   animation: signatureShine 3.8s ease-in-out infinite;
 }
@@ -1416,9 +1460,12 @@ border: 1px solid rgba(212,175,55,.35);
   .masonry-gallery { columns: 2; }
 
   .permit-items,
-  .coffin-type-actions,
   .coffin-modal-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .farasha-service-details {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -1483,7 +1530,7 @@ border: 1px solid rgba(212,175,55,.35);
   }
 
   .coffin-type-actions {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .coffin-modal-grid {
