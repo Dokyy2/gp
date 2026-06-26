@@ -36,7 +36,14 @@ const christianCoffinImages = [
   { src: "assets/images/coffins/christian-19.png", title: "تابوت مسيحي موديل 19" },
   { src: "assets/images/coffins/christian-20.png", title: "تابوت مسيحي موديل 20" },
   { src: "assets/images/coffins/christian-21.png", title: "تابوت مسيحي موديل 21" },
-  { src: "assets/images/coffins/christian-22.png", title: "تابوت مسيحي موديل 22" }
+  { src: "assets/images/coffins/christian-22.png", title: "تابوت مسيحي موديل 22" },
+  { src: "assets/images/coffins/christian-23.png", title: "تابوت مسيحي موديل 23" },
+  { src: "assets/images/coffins/christian-24.png", title: "تابوت مسيحي موديل 24" },
+  { src: "assets/images/coffins/christian-25.png", title: "تابوت مسيحي موديل 25" },
+  { src: "assets/images/coffins/christian-26.png", title: "تابوت مسيحي موديل 26" },
+  { src: "assets/images/coffins/christian-27.png", title: "تابوت مسيحي موديل 27" },
+
+
 ];
 
 const coffinGalleries = {
